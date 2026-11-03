@@ -54,9 +54,11 @@ def construire_programme() -> Programme:
     cours_3r1 = Cours("3R1 — Réseaux informatiques")
     cours_3r1.ajouter_session(session_3r1_a26)
 
+    departement_info = Departement("Departement d'informatique")
+    departement_info.ajouter(cours_3d3)
+    departement_info.ajouter(cours_3r1)
+
     # --- Programme ---
     programme = Programme("Techniques de l'informatique")
-    programme.ajouter_cours(cours_3d3)
-    programme.ajouter_cours(cours_3r1)
-
+    programme.ajouter(departement_info)
     return programme
